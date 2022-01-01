@@ -1,0 +1,13 @@
+{
+    "applinks": {
+        "details": []
+    },
+    "webcredentials": {
+        "apps": [
+            "prefix.app.fyreplace.Fyreplace"
+        ]
+    },
+    "appclips": {
+        "apps": []
+    }
+}
