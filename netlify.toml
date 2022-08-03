@@ -10,4 +10,12 @@
 [[headers]]
   for = "/.well-known/apple-app-site-association"
   [headers.values]
-    content-type = "application/json"
+    Content-Type = "application/json"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Content-Security-Policy = "default-src self https:"
+    Referrer-Policy = "no-referrer"
