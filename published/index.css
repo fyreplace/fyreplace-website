@@ -30,8 +30,10 @@ body {
 }
 
 main {
-    padding: 1em;
-    padding-top: 10vh;
+    padding-top: calc(env(safe-area-inset-top) + 10vh);
+    padding-bottom: 3em;
+    padding-left: calc(env(safe-area-inset-left) + 1em);
+    padding-right: calc(env(safe-area-inset-right) + 1em);
     flex-grow: 1;
 }
 
@@ -53,6 +55,12 @@ a {
 .footer nav,
 .footer ul {
     height: 100%;
+}
+
+.footer nav {
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: calc(env(safe-area-inset-left) + 1em);
+    padding-right: calc(env(safe-area-inset-right) + 1em);
 }
 
 .footer ul {
