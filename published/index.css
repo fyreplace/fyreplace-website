@@ -30,7 +30,11 @@ body {
 }
 
 main {
-    padding-top: calc(env(safe-area-inset-top) + 10vh);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: calc(env(safe-area-inset-top) + 3em);
     padding-bottom: 3em;
     padding-left: calc(env(safe-area-inset-left) + 1em);
     padding-right: calc(env(safe-area-inset-right) + 1em);
@@ -38,12 +42,39 @@ main {
 }
 
 a {
-    color: #ff8243;
+    color: var(--color-accent);
+}
+
+a[role=button] {
+    display: inline-block;
+    margin: 0.5em;
+    padding: 0.5em 1.5em;
+    border: 2px solid var(--color-accent);
+    border-radius: 8px;
+    font-size: 1.2em;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+a[role=button]:hover {
+    background: var(--color-accent);
+    color: white;
+    transition: 0.1s;
+}
+
+a[role=button]:active {
+    transform: scale(0.9);
 }
 
 .logo {
     width: 80px;
     height: 80px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
 }
 
 .footer {
@@ -83,6 +114,12 @@ a {
     display: inline-flex;
     align-items: center;
     color: unset;
+}
+
+@media (min-width: 400px) {
+    .buttons {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (min-width: 600px) {
