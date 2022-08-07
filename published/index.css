@@ -116,12 +116,6 @@ a[role=button]:active {
     color: unset;
 }
 
-@media (min-width: 400px) {
-    .buttons {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
 @media (min-width: 600px) {
     .footer {
         height: 3em;
@@ -134,5 +128,11 @@ a[role=button]:active {
 
     .footer li {
         height: 100%;
+    }
+}
+
+@media (min-width: 800px) {
+    .buttons {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
