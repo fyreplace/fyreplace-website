@@ -1,6 +1,3 @@
-/.well-known/apple-app-site-association
-    Content-Type: application/json
-
 /*
     X-Frame-Options: DENY
     X-Content-Type-Options: nosniff
