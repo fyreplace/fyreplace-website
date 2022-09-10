@@ -1,10 +1,4 @@
-.PHONY: all build publish
+.PHONY: all
 
-all: build publish
-
-build:
-	@node .well-known/build.js
-
-publish:
-	@mkdir -p published/.well-known
-	@cp .well-known/apple-app-site-association published/.well-known
+all:
+	@echo "Nothing to do"
