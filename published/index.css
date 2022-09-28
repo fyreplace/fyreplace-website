@@ -129,9 +129,7 @@ a[role=button]:active {
     .footer li {
         height: 100%;
     }
-}
 
-@media (min-width: 900px) {
     .buttons {
         grid-template-columns: repeat(2, 1fr);
     }
