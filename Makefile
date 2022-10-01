@@ -1,4 +1,5 @@
 .PHONY: all
 
 all:
-	@echo "Nothing to do"
+	npm ci
+	npm run generate
