@@ -1,4 +1,9 @@
-.PHONY: all
+.PHONY: all dependencies build
 
-all:
-	@echo "Nothing to do"
+all: dependencies build
+
+dependencies:
+	npm ci
+
+build:
+	npm run generate

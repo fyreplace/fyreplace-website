@@ -1,0 +1,33 @@
+:root {
+    --color-accent: #ff8243;
+    --color-footer-border: rgba(0%, 0%, 0%, 30%);
+    height: 100%;
+}
+
+:root,
+body,
+#__nuxt {
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    margin: 0;
+    flex-grow: 1;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+#__nuxt {
+    flex-grow: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-footer-border: rgba(100%, 100%, 100%, 30%);
+    }
+}
+
+a {
+    color: var(--color-accent);
+}
