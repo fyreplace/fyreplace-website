@@ -1,5 +1,9 @@
-.PHONY: all
+.PHONY: all dependencies build
 
-all:
+all: dependencies build
+
+dependencies:
 	npm ci
+
+build:
 	npm run generate
