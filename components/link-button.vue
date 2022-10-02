@@ -1,7 +1,7 @@
 <template>
-  <a class="action-button" :href="href">
+  <nuxt-link class="link-button" :to="href">
     <slot />
-  </a>
+  </nuxt-link>
 </template>
 
 <script lang="ts">
@@ -17,7 +17,7 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.action-button {
+.link-button {
   display: inline-block;
   margin: 0.5em;
   padding: 0.5em 1.5em;
@@ -30,13 +30,13 @@ export default defineComponent({
   transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
 
-.action-button:hover {
+.link-button:hover {
   background: var(--color-accent);
   color: white;
   transition: 0.1s;
 }
 
-.action-button:active {
+.link-button:active {
   transform: scale(0.9);
 }
 </style>

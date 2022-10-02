@@ -4,10 +4,10 @@
     <h1>Fyreplace</h1>
     <p><strong>Coming soon...</strong> Follow development on:</p>
     <div class="buttons">
-      <action-button href="https://t.me/FyreplaceNews">Telegram channel</action-button>
-      <action-button href="https://t.me/Fyreplace">Telegram group</action-button>
-      <action-button href="https://reddit.com/r/Fyreplace">Subreddit</action-button>
-      <action-button href="https://github.com/fyreplace">GitHub org</action-button>
+      <link-button href="https://t.me/FyreplaceNews">Telegram channel</link-button>
+      <link-button href="https://t.me/Fyreplace">Telegram group</link-button>
+      <link-button href="https://reddit.com/r/Fyreplace">Subreddit</link-button>
+      <link-button href="https://github.com/fyreplace">GitHub org</link-button>
     </div>
   </main>
 </template>
