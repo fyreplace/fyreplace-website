@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link class="link-button" :to="href">
+  <nuxt-link external class="link-button" :to="href">
     <slot />
   </nuxt-link>
 </template>
