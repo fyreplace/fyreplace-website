@@ -1,5 +1,7 @@
 :root {
-    --color-accent: #ff8243;
+    --color-accent: coral;
+    --color-accent-ios: dodgerblue;
+    --color-accent-android: mediumseagreen;
     --color-footer-border: rgba(0%, 0%, 0%, 30%);
     height: 100%;
 }
