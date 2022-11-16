@@ -71,4 +71,10 @@ export default defineNuxtConfig({
       ],
     },
   },
+  runtimeConfig: {
+    public: {
+      appleAppStoreUrl: "",
+      googlePlayStoreUrl: "",
+    },
+  },
 });
