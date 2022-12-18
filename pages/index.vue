@@ -2,7 +2,7 @@
   <main class="page">
     <logo />
     <h1>Fyreplace</h1>
-    <p>Comming soon...</p>
+    <p>Currently in <strong>public beta</strong>!</p>
     <div class="buttons">
       <link-button v-if="config.public.appleAppStoreUrl" :href="config.public.appleAppStoreUrl" large
         color="var(--color-accent-ios)" :style="{ order: isApplePlatform ? 0 : 1 }">
