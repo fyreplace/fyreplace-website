@@ -10,7 +10,7 @@
   "devDependencies": {
     "@types/ua-parser-js": "^0.7.36",
     "nuxt": "^3.0.0",
-    "vue-tsc": "^1.0.13"
+    "vue-tsc": "^1.0.22"
   },
   "dependencies": {
     "ua-parser-js": "^1.0.32"
