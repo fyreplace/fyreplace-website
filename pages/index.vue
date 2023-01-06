@@ -14,10 +14,10 @@
       </link-button>
     </div>
     <div class="buttons">
-      <link-button href="https://t.me/FyreplaceNews">Telegram channel</link-button>
-      <link-button href="https://t.me/Fyreplace">Telegram group</link-button>
-      <link-button href="https://reddit.com/r/Fyreplace">Subreddit</link-button>
-      <link-button href="https://github.com/fyreplace">GitHub org</link-button>
+      <link-button :href="config.public.telegramUrl">Telegram</link-button>
+      <link-button :href="config.public.discordUrl">Discord</link-button>
+      <link-button :href="config.public.redditUrl">Subreddit</link-button>
+      <link-button :href="config.public.githubUrl">GitHub</link-button>
     </div>
   </main>
 </template>

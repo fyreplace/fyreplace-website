@@ -75,6 +75,10 @@ export default defineNuxtConfig({
     public: {
       appleAppStoreUrl: "",
       googlePlayStoreUrl: "",
+      telegramUrl: "",
+      discordUrl: "",
+      redditUrl: "",
+      githubUrl: "",
     },
   },
 });
