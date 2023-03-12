@@ -1,9 +1,11 @@
 {
   "name": "fyreplace-website",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "vite dev",
-    "build": "vite build",
+    "build": "svelte-kit sync && vite build",
+    "start": "node ./build",
     "preview": "vite preview",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
@@ -12,18 +14,18 @@
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "^2.0.0",
-    "@sveltejs/kit": "^1.7.1",
+    "@sveltejs/adapter-node": "^1.2.2",
+    "@sveltejs/kit": "^1.11.0",
     "@types/ua-parser-js": "^0.7.36",
     "prettier": "^2.8.4",
     "prettier-plugin-svelte": "^2.9.0",
-    "svelte": "^3.55.1",
-    "svelte-check": "^3.0.3",
+    "svelte": "^3.56.0",
+    "svelte-check": "^3.1.2",
     "tslib": "^2.5.0",
     "typescript": "^4.9.5",
-    "vite": "^4.1.2"
+    "vite": "^4.1.4"
   },
-  "type": "module",
   "dependencies": {
-    "ua-parser-js": "^1.0.33"
+    "ua-parser-js": "^1.0.34"
   }
 }

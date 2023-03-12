@@ -1,11 +1,12 @@
 import { vitePreprocess } from '@sveltejs/kit/vite';
-import adapter from '@sveltejs/adapter-auto';
+import autoAdapter from '@sveltejs/adapter-auto';
+import nodeAdapter from '@sveltejs/adapter-node';
 
 /** @type {import('@sveltejs/kit').Config} */
-const config = {
+export default {
   preprocess: vitePreprocess(),
   kit: {
-    adapter: adapter(),
+    adapter: process.env.NODE_ADAPTER ? nodeAdapter({ precompress: true }) : autoAdapter(),
     csp: {
       directives: {
         'frame-src': ['none'],
@@ -14,5 +15,3 @@ const config = {
     }
   }
 };
-
-export default config;
