@@ -26,9 +26,9 @@ export const POST = (async (event) => {
 
   return fetch(allowedDsnUrl.toString(), {
     method: 'POST',
-    headers: new Headers({
+    headers: {
       Authorization: 'Basic ' + Buffer.from(credentials).toString('base64')
-    }),
+    },
     credentials: 'include',
     body: await event.request.blob()
   });
