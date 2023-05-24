@@ -16,6 +16,7 @@
     "@sveltejs/adapter-auto": "^2.1.0",
     "@sveltejs/adapter-node": "^1.2.4",
     "@sveltejs/kit": "^1.18.0",
+    "@types/node": "^20.2.3",
     "@types/ua-parser-js": "^0.7.36",
     "prettier": "^2.8.8",
     "prettier-plugin-svelte": "^2.10.0",
@@ -26,6 +27,7 @@
     "vite": "^4.3.8"
   },
   "dependencies": {
+    "@sentry/sveltekit": "^7.53.0",
     "ua-parser-js": "^1.0.35"
   }
 }
