@@ -1,7 +1,7 @@
+import { type RequestHandler, text } from '@sveltejs/kit';
 import { env } from '$env/dynamic/private';
 
-export function GET(): Response {
+export const GET = (() => {
   const restricted = (env.IS_PRODUCTION ?? '').toLowerCase() !== 'true';
-  const robots = 'User-agent: *\nDisallow: ' + (restricted ? '/' : '');
-  return new Response(robots, { headers: { 'Content-Type': 'text/plain' } });
-}
+  return text('User-agent: *\nDisallow: ' + (restricted ? '/' : ''));
+}) satisfies RequestHandler;
