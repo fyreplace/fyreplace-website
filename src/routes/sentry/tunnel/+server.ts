@@ -24,12 +24,19 @@ export const POST = (async (event) => {
   allowedDsnUrl.password = '';
   allowedDsnUrl.pathname = `/api${allowedDsnUrl.pathname}/envelope/`;
 
-  return fetch(allowedDsnUrl.toString(), {
+  const response = await fetch(allowedDsnUrl.toString(), {
     method: 'POST',
     headers: {
       Authorization: 'Basic ' + Buffer.from(credentials).toString('base64')
     },
     credentials: 'include',
     body: await event.request.blob()
+  });
+
+  // Responses from fetch have immutable headers, but SvelteKit needs to modify them
+  return new Response(response.body, {
+    status: response.status,
+    statusText: response.statusText,
+    headers: new Headers(response.headers)
   });
 }) satisfies RequestHandler;
