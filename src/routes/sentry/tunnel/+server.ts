@@ -8,7 +8,7 @@ export const POST = (async (event) => {
 
   const allowedDsnUrl = new URL(env.PUBLIC_SENTRY_DSN);
   const credentials = `${allowedDsnUrl.username}:${allowedDsnUrl.password}`;
-  const envelope = await event.request.text();
+  const envelope = await event.request.clone().text();
 
   try {
     const requestHeader = JSON.parse(envelope.split('\n')[0]);
@@ -24,12 +24,12 @@ export const POST = (async (event) => {
   allowedDsnUrl.password = '';
   allowedDsnUrl.pathname = `/api${allowedDsnUrl.pathname}/envelope/`;
 
-  return fetch(allowedDsnUrl, {
+  return fetch(allowedDsnUrl.toString(), {
     method: 'POST',
     headers: new Headers({
       Authorization: 'Basic ' + Buffer.from(credentials).toString('base64')
     }),
     credentials: 'include',
-    body: envelope
+    body: await event.request.blob()
   });
 }) satisfies RequestHandler;
