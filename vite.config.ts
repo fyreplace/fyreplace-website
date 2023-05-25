@@ -1,4 +1,4 @@
-import type { UserConfig } from 'vite';
+import { defineConfig } from 'vite';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { sentrySvelteKit } from '@sentry/sveltekit';
 
@@ -8,6 +8,4 @@ if (process.env.SENTRY_AUTH_TOKEN) {
   plugins.unshift(sentrySvelteKit());
 }
 
-const config: UserConfig = { plugins };
-
-export default config;
+export default defineConfig({ plugins });

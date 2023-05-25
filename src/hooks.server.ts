@@ -7,7 +7,6 @@ import { userAgent } from '$lib/stores/user-agent';
 Sentry.init({
   dsn: env.PUBLIC_SENTRY_DSN,
   environment: env.PUBLIC_SENTRY_ENVIRONMENT,
-  integrations: [],
   tracesSampleRate: 0.1
 });
 
@@ -19,7 +18,7 @@ const addSecurityHeaders = (({ event, resolve }) => {
     'Referrer-Policy': 'no-referrer'
   });
   return resolve(event);
-}) satisfies Handle
+}) satisfies Handle;
 
 export const handleError = Sentry.handleErrorWithSentry();
 
