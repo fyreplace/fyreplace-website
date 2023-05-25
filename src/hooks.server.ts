@@ -18,7 +18,7 @@ const addSecurityHeaders = (({ event, resolve }) => {
     'Referrer-Policy': 'no-referrer'
   });
   return resolve(event);
-}) satisfies Handle
+}) satisfies Handle;
 
 export const handleError = Sentry.handleErrorWithSentry();
 
