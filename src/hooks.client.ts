@@ -9,7 +9,10 @@ Sentry.init({
   tunnel: sentryTunnelPath,
   ignoreTransactions: [sentryTunnelPath, '/health'],
   denyUrls: [sentryTunnelPath],
-  tracesSampleRate: 0.1
+  integrations: [new Sentry.Replay()],
+  tracesSampleRate: 0.1,
+  replaysSessionSampleRate: 0.0,
+  replaysOnErrorSampleRate: 1.0
 });
 
 export const handleError = Sentry.handleErrorWithSentry();
