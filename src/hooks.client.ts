@@ -1,11 +1,14 @@
 import * as Sentry from '@sentry/sveltekit';
 import { env } from '$env/dynamic/public';
 
+const sentryTunnelPath = '/sentry/tunnel';
+
 Sentry.init({
   dsn: env.PUBLIC_SENTRY_DSN,
   environment: env.PUBLIC_SENTRY_ENVIRONMENT,
-  tunnel: '/sentry/tunnel',
-  denyUrls: ['/sentry/tunnel'],
+  tunnel: sentryTunnelPath,
+  ignoreTransactions: [sentryTunnelPath],
+  denyUrls: [sentryTunnelPath],
   integrations: [new Sentry.Replay()],
   tracesSampleRate: 0.1,
   replaysSessionSampleRate: 0.0,
