@@ -14,7 +14,7 @@
 <main class="page">
   <Logo />
   <h1>Fyreplace</h1>
-  <p>Currently in <strong>public beta</strong>!</p>
+  <p>Now publicly available for iOS and Android</p>
   <div class="buttons">
     <LinkButton
       href={env.PUBLIC_APPLE_APP_STORE_URL}
