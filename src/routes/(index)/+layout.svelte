@@ -4,9 +4,9 @@
 
 <div class="layout">
   <div class="content">
-    <slot />
+    <slot></slot>
   </div>
-  <FooterLinks />
+  <FooterLinks></FooterLinks>
 </div>
 
 <style>

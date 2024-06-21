@@ -21,7 +21,7 @@
 </svelte:head>
 
 <main class="page">
-  <Logo />
+  <Logo></Logo>
   <h1>Fyreplace</h1>
   <p>Now publicly available for iOS and Android</p>
   <div class="buttons">
