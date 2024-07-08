@@ -6,7 +6,7 @@
 </script>
 
 <a class="link-button" {href} class:-large={large} style:order style:--color-accent={color}>
-  <slot></slot>
+  <slot />
 </a>
 
 <style>
