@@ -21,7 +21,7 @@
 </svelte:head>
 
 <main class="page">
-  <Logo></Logo>
+  <Logo />
   <h1>Fyreplace</h1>
   <p>Now publicly available for iOS and Android</p>
   <div class="buttons">
@@ -32,7 +32,7 @@
         order={$isApplePlatform ? 0 : 1}
         color="var(--color-accent-ios)"
       >
-        <AppleAppStore></AppleAppStore>App Store
+        <AppleAppStore />App Store
       </LinkButton>
     {/if}
     {#if env.PUBLIC_GOOGLE_PLAY_STORE_URL}
@@ -42,7 +42,7 @@
         order={$isApplePlatform ? 1 : 0}
         color="var(--color-accent-android)"
       >
-        <GooglePlayStore></GooglePlayStore>Google Play
+        <GooglePlayStore />Google Play
       </LinkButton>
     {/if}
   </div>
