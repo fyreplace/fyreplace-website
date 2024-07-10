@@ -1,15 +1,16 @@
 import type { Handle } from '@sveltejs/kit';
 import { sequence } from '@sveltejs/kit/hooks';
+import { handleErrorWithSentry, sentryHandle } from '@sentry/sveltekit';
 import * as Sentry from '@sentry/sveltekit';
 import { env } from '$env/dynamic/public';
 import { userAgent } from '$lib/stores/user-agent';
 
 Sentry.init({
+  enabled: !!env.PUBLIC_SENTRY_DSN,
   dsn: env.PUBLIC_SENTRY_DSN,
   environment: env.PUBLIC_SENTRY_ENVIRONMENT,
-  release: process.env.npm_package_name + '@' + env.PUBLIC_SENTRY_RELEASE,
-  ignoreTransactions: ['/health'],
-  tracesSampleRate: 0.1
+  tracesSampleRate: 0.0,
+  ignoreTransactions: ['/health']
 });
 
 const addSecurityHeaders = (({ event, resolve }) => {
@@ -22,6 +23,6 @@ const addSecurityHeaders = (({ event, resolve }) => {
   return resolve(event);
 }) satisfies Handle;
 
-export const handleError = Sentry.handleErrorWithSentry();
+export const handle = sequence(sentryHandle(), addSecurityHeaders);
 
-export const handle = sequence(Sentry.sentryHandle(), addSecurityHeaders);
+export const handleError = handleErrorWithSentry();

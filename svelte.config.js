@@ -6,7 +6,7 @@ import nodeAdapter from '@sveltejs/adapter-node';
 export default {
   preprocess: vitePreprocess(),
   kit: {
-    adapter: process.env.NODE_ADAPTER ? nodeAdapter({ precompress: true }) : autoAdapter(),
+    adapter: process.env.ADAPTER_NODE ? nodeAdapter({ precompress: true }) : autoAdapter(),
     csp: {
       directives: {
         'frame-src': ['none'],
