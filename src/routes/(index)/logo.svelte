@@ -1,8 +1,8 @@
 <svg viewBox="0 0 500 500" class="logo">
   <defs>
     <linearGradient id="gradient" gradientTransform="rotate(90)">
-      <stop offset="0%" stop-color="#FFA253"/>
-      <stop offset="100%" stop-color="#FF7243"/>
+      <stop offset="0%" stop-color="#FFA253" />
+      <stop offset="100%" stop-color="#FF7243" />
     </linearGradient>
   </defs>
   <path
