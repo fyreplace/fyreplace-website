@@ -12,7 +12,6 @@
 <style>
 	.link-button {
 		display: inline-flex;
-		justify-content: center;
 		align-items: center;
 		gap: 0.5em;
 		margin: 0.5em;
@@ -21,9 +20,9 @@
 		border: 2px solid var(--color-accent);
 		border-radius: 8px;
 		color: white;
-		stroke: white;
-		stroke-width: 2px;
-		fill: none;
+		stroke: none;
+		stroke-width: 0;
+		fill: currentColor;
 		font-size: 1.2em;
 		text-decoration: none;
 		cursor: pointer;
@@ -33,6 +32,12 @@
 	.link-button.-large {
 		background: var(--color-accent);
 		font-size: 1.4em;
+	}
+
+	@media (min-width: 600px) {
+		.link-button.-large {
+			justify-content: center;
+		}
 	}
 
 	.link-button:not(.-large) {
