@@ -1,30 +1,30 @@
 :root {
-  --color-accent: coral;
-  --color-accent-ios: dodgerblue;
-  --color-accent-android: mediumseagreen;
-  --color-footer-border: rgba(0%, 0%, 0%, 30%);
-  height: 100%;
+	--color-accent: coral;
+	--color-accent-ios: dodgerblue;
+	--color-accent-android: forestgreen;
+	--color-footer-border: rgba(0%, 0%, 0%, 30%);
+	height: 100%;
 }
 
 :root,
 body {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 body {
-  margin: 0;
-  flex-grow: 1;
-  box-sizing: border-box;
-  font-family: sans-serif;
+	margin: 0;
+	flex-grow: 1;
+	box-sizing: border-box;
+	font-family: sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --color-footer-border: rgba(100%, 100%, 100%, 30%);
-  }
+	:root {
+		--color-footer-border: rgba(100%, 100%, 100%, 30%);
+	}
 }
 
 a {
-  color: var(--color-accent);
+	color: var(--color-accent);
 }

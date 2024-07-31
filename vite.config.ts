@@ -10,15 +10,15 @@ const version = (await execAsync('git describe --tags --abbrev=0')).stdout.trim(
 const build = (await execAsync('git rev-list --count HEAD')).stdout.trim();
 
 export default defineConfig({
-  plugins: [
-    sentrySvelteKit({
-      adapter: process.env.ADAPTER_NODE ? 'node' : 'auto',
-      sourceMapsUploadOptions: {
-        release: {
-          name: `${pkg.name}@${version}+${build}`
-        }
-      }
-    }),
-    sveltekit()
-  ]
+	plugins: [
+		sentrySvelteKit({
+			adapter: process.env.ADAPTER_NODE ? 'node' : 'auto',
+			sourceMapsUploadOptions: {
+				release: {
+					name: `${pkg.name}@${version}+${build}`
+				}
+			}
+		}),
+		sveltekit()
+	]
 });
