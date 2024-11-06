@@ -1,12 +1,19 @@
 <script lang="ts">
-	export let href: string;
-	export let large = false;
-	export let order = 0;
-	export let color = '';
+	import type { Snippet } from 'svelte';
+
+	interface Props {
+		href: string;
+		large?: boolean;
+		order?: number;
+		color?: string;
+		children: Snippet;
+	}
+
+	let { href, large = false, order = 0, color = '', children }: Props = $props();
 </script>
 
 <a class="link-button" {href} class:-large={large} style:order style:--color-accent={color}>
-	<slot />
+	{@render children()}
 </a>
 
 <style>
@@ -19,7 +26,6 @@
 		box-sizing: border-box;
 		border: 2px solid var(--color-accent);
 		border-radius: 8px;
-		color: white;
 		stroke: none;
 		stroke-width: 0;
 		fill: currentColor;
@@ -30,6 +36,7 @@
 	}
 
 	.link-button.-large {
+		color: white;
 		background: var(--color-accent);
 		font-size: 1.4em;
 	}
@@ -40,20 +47,18 @@
 		}
 	}
 
-	.link-button:not(.-large) {
+	.link-button:not(:global(.-large)) {
 		color: var(--color-accent);
-		stroke: var(--color-accent);
 	}
 
 	.link-button:hover {
 		background: var(--color-accent);
 		color: white;
-		stroke: white;
 		transition: 0.1s;
 	}
 
 	.link-button.-large:hover {
-		filter: brightness(125%);
+		filter: brightness(150%);
 	}
 
 	.link-button:active {
