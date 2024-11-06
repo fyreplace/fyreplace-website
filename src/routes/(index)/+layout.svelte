@@ -1,10 +1,16 @@
-<script>
+<script lang="ts">
+	import type { Snippet } from 'svelte';
 	import FooterLinks from './footer-links.svelte';
+	interface Props {
+		children: Snippet;
+	}
+
+	let { children }: Props = $props();
 </script>
 
 <div class="layout">
 	<div class="content">
-		<slot />
+		{@render children()}
 	</div>
 	<FooterLinks />
 </div>
