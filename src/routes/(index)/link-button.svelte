@@ -19,7 +19,6 @@
 		box-sizing: border-box;
 		border: 2px solid var(--color-accent);
 		border-radius: 8px;
-		color: white;
 		stroke: none;
 		stroke-width: 0;
 		fill: currentColor;
@@ -30,6 +29,7 @@
 	}
 
 	.link-button.-large {
+		color: white;
 		background: var(--color-accent);
 		font-size: 1.4em;
 	}
@@ -42,18 +42,16 @@
 
 	.link-button:not(.-large) {
 		color: var(--color-accent);
-		stroke: var(--color-accent);
 	}
 
 	.link-button:hover {
 		background: var(--color-accent);
 		color: white;
-		stroke: white;
 		transition: 0.1s;
 	}
 
 	.link-button.-large:hover {
-		filter: brightness(125%);
+		filter: brightness(150%);
 	}
 
 	.link-button:active {
