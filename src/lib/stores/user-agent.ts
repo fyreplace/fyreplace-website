@@ -1,5 +1,5 @@
 import { derived, writable } from 'svelte/store';
-import UAParser from 'ua-parser-js';
+import { UAParser } from 'ua-parser-js';
 
 export const userAgent = writable<string | undefined>();
 
