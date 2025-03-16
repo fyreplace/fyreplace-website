@@ -25,9 +25,8 @@
 			<a href="https://en.wikipedia.org/wiki/Hash_function"
 				>a digital signature of the email (known as a "hashed" version of the address)</a
 			>
-			is sent upon registration to
-			<a href="http://gravatar.com">Gravatar</a> in order to retrieve an initial profile picture, if
-			available.
+			is sent upon registration to <a href="http://gravatar.com">Gravatar</a> in order to retrieve
+			an initial profile picture, if available.
 			<br />
 			Your email address is not shared with any other third party.
 		</li>
@@ -68,9 +67,9 @@
 	</p>
 	<h3>Transmission</h3>
 	<p>
-		Your data is handled using the widely used standard of
-		<a href="https://en.wikipedia.org/wiki/Transport_Layer_Security">TLS encryption</a>.
-		Communications between the client and server applications never occur in clear text, and thus
+		Your data is handled using the widely used standard of <a
+			href="https://en.wikipedia.org/wiki/Transport_Layer_Security">TLS encryption</a
+		>. Communications between the client and server applications never occur in clear text, and thus
 		cannot be intercepted and read/tampered with by a malicious actor.
 	</p>
 	<h3>Storage</h3>

@@ -24,7 +24,7 @@
 		<li>
 			<strong>Irrespectful content</strong>
 			<br />
-			No amount of bullying, harrassement, discrimination based on ethnicity, personal beliefs/opinions,
+			No amount of bullying, harassment, discrimination based on ethnicity, personal beliefs/opinions,
 			gender, sexual orientation, is allowed. This list is not meant to be exhaustive. In simple terms:
 			be nice to each other.
 		</li>

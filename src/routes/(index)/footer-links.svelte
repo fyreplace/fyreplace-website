@@ -8,6 +8,9 @@
 				<a href="/privacy-policy">Privacy policy</a>
 			</li>
 			<li>
+				<a href="/child-safety">Child safety</a>
+			</li>
+			<li>
 				<a href="/contact">Contact</a>
 			</li>
 		</ul>
@@ -54,7 +57,7 @@
 		color: unset;
 	}
 
-	@media (min-width: 600px) {
+	@media (min-width: 720px) {
 		.footer {
 			height: 3em;
 		}
