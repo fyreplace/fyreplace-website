@@ -1,0 +1,7 @@
+{
+	"name": "Development",
+	"image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
+	"features": {},
+	"forwardPorts": [5173],
+	"postCreateCommand": "npm ci && npm run check"
+}
